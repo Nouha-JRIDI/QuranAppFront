@@ -1,0 +1,41 @@
+
+.white-btn{
+display: flex;
+align-items: center;
+gap: 5px;
+  color: rgb(80,179,179);
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid rgb(80,179,179);
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  margin-top: 10px;
+  width: fit-content;
+  transition: all 0.3s linear;
+}
+.white-btn:hover{
+    color: white;
+    background-color: rgb(80,179,179);
+    cursor: pointer;
+    
+  }
+
+  .students-list{
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+    width: 50vw;
+    align-self: center;
+    
+  }
+  .students-list th {
+    background-color:  rgb(66, 65, 104);
+    color: white;
+    padding: 4px;
+  }
+  .flex-sa{
+    display: flex;
+    justify-content: space-around;
+  }
+  .student-name{
+    color: rgb(4, 21, 77);
+  }
