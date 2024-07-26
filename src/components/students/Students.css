@@ -20,14 +20,14 @@ gap: 5px;
     
   }
 
-  .students-list{
+  .blue-table{
     margin: 20px 0px 10px 0px;
     text-align: center;
     width: 50vw;
     align-self: center;
     
   }
-  .students-list th {
+  .blue-table th {
     background-color:  rgb(66, 65, 104);
     color: white;
     padding: 4px;
