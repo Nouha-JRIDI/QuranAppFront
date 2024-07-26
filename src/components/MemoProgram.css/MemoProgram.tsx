@@ -16,7 +16,7 @@ const MemoProgram = () => {
         <h1>برنامج الحفظ رقم {id}</h1>
         <SearchBar />
         </div>
-        <table className="students-list">
+        <table className="blue-table">
             <tr>
                 <th>الطالب</th> 
                 <th>التاريخ </th>

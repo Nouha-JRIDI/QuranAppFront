@@ -21,7 +21,7 @@ const Students = () => {
             </button></Link>
             <SearchBar />
             </div>
-            <table className="students-list">
+            <table className="blue-table">
             <tr>
                 <th>الإسم</th> 
                 <th>البريد الإلكتروني</th>

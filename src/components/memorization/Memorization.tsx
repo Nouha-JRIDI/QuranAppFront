@@ -31,7 +31,7 @@ const Memorization = () => {
             <SearchBar />
           </div>
           
-          <table className="students-list">
+          <table className="blue-table">
             <tr>
             <th> </th>
                 <th>أيام الأسبوع</th> 
