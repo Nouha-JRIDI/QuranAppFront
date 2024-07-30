@@ -8,10 +8,10 @@ import Login from './components/login/Login';
 import SearchStudent from './components/searchStudent/SearchStudent';
 import Students from './components/students/Students';
 import Memorization from './components/memorization/Memorization';
-import StudentProfile from './components/studentProfile/StudentProfile';
-import MemoProgram from './components/MemoProgram.css/MemoProgram';
+import MemoProgram from './components/memoProgram/MemoProgram';
 import Revision from './components/revision/Revision';
 import Exams from './components/exams/Exams';
+import StudentInfo from './components/studentInfo/StudentInfo';
 
 function App() {
   useEffect(() => {
@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
       <Routes>
               <Route path="/memoProgram/:id" element={<MemoProgram />} />
-              <Route path="/studentProfile" element={<StudentProfile />} />
+              <Route path="/studentInfo/:fullname/:email" element={<StudentInfo />} />
               <Route path="/revision" element={<Revision />} />
               <Route path="/exams" element={<Exams />} />
               <Route path="/memorization" element={<Memorization />} />

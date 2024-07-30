@@ -6,19 +6,20 @@ import { arTN } from 'date-fns/locale';
 registerLocale('ar', arTN);
 
 const ArabicDatePicker = () => {
-    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [delayDate, setDelayDate] = useState<Date | null>(new Date());
 
   return (
     <div>
-      <label htmlFor="start">Start date:</label>
+      <label style={{fontSize:"12px"}} htmlFor="start">تاريخ التأجيل:</label>
       <DatePicker
+      className='date-picker'
         id="start"
-        selected={startDate}
-        onChange={(date: Date | null) => setStartDate(date)}
+        selected={delayDate}
+        onChange={(date: Date | null) => setDelayDate(date)}
         locale="ar"
         dateFormat="yyyy-MM-dd"
-        minDate={new Date(2018, 0, 1)}
-        maxDate={new Date(2018, 11, 31)}
+        minDate={new Date(2024, 0, 1)}
+        maxDate={new Date(2024, 11, 31)}
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import { faGear, faGlobe, faRightFromBracket, faUserCheck} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Navbar.css'
 
@@ -41,7 +41,7 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faUserCheck} className='icon'/>
         <FontAwesomeIcon icon={faGlobe} className='icon'/>
         <FontAwesomeIcon icon={faGear} className='icon' />   
-        <FontAwesomeIcon icon={faRightFromBracket} className='icon logout-btn' />
+        <Link to='/' ><FontAwesomeIcon icon={faRightFromBracket} className='icon logout-btn' /></Link>
 
         </div>
 

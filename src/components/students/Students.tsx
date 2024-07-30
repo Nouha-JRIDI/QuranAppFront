@@ -5,14 +5,18 @@ import './Students.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 
+
+const students=[{id:1,fullname:"جميلة عامري",email:"jamilaamri@gmail.com",memoQuantity:"3 صفحات",disciplineMark:"+++"},
+    {id:2,fullname:"مريم بن سالم",email:"meriembensalem@gmail.com",memoQuantity:"2 أجزاء",disciplineMark:"++"},
+    {id:3,fullname:"أحمد السريدي",email:"ahmedsridi@gmail.com",memoQuantity:"5 صفحات",disciplineMark:"++"},
+    {id:4,fullname:"محسن بن قاسم",email:"mohsenbenkacem@gmail.com",memoQuantity:"3 أجزاء",disciplineMark:"+++"},
+]
+
 const Students = () => {
   return (
     <div>
         <Navbar />
-        <div className="main">
-            <div>
-            <h2>لائحة الطلبة</h2>
-            <div className="flex-sa">
+        <div className="flex-sa">
             <Link to="/searchStudent" >
             <button className="white-btn">
                  <FontAwesomeIcon icon={faUserPlus} />
@@ -21,6 +25,10 @@ const Students = () => {
             </button></Link>
             <SearchBar />
             </div>
+        <div className="main">
+            <div>
+            <h2>لائحة الطلبة</h2>
+           
             <table className="blue-table">
             <tr>
                 <th>الإسم</th> 
@@ -28,42 +36,15 @@ const Students = () => {
                 <th>مقدار الحفظ</th>
                 <th>علامة الإنظباط</th>
             </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">جميلة</Link></td>
-                <td>jamila@gmail.com</td>
-                <td>3 صفحات</td>
-                <td>++</td>
+            {students.map((student) => (
+                <tr key={student.id}>
+                <td><Link className="student-name" to={`/studentInfo/${student.fullname}/${student.email}`}>{student.fullname}</Link></td>
+                <td>{student.email}</td>
+                <td>{student.memoQuantity}</td>
+                <td>{student.disciplineMark}</td>
             </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">مريم</Link></td> 
-                <td>meriem@gmail.com</td>
-                <td>2 أجزاء</td>
-                <td>++</td>
-            </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">سناء</Link></td>
-                <td>sana@gmail.com</td>
-                <td>2 أجزاء</td>
-                <td>+++</td>
-            </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">فلان</Link></td>
-                <td>foulen@gmail.com</td>
-                <td>2 أجزاء</td>
-                <td>++</td>
-            </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">فلان</Link></td>
-                <td>foulen@gmail.com</td>
-                <td>2 أجزاء</td>
-                <td>++</td>
-            </tr>
-            <tr>
-                <td><Link className="student-name" to="/studentProfile">فلان</Link></td>
-                <td>foulen@gmail.com</td>
-                <td>2 أجزاء</td>
-                <td>++</td>
-            </tr>
+            ))}
+           
             </table>
             </div>
             <div>
