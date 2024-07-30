@@ -65,8 +65,7 @@ const Exams = () => {
   return (
     <div>
         <Navbar />
-        <div className="main-section">
-          <div className="flex-sa">
+        <div className="flex-sa">
             
             <button className="white-btn">
             <FontAwesomeIcon icon={faPlus} />
@@ -76,6 +75,8 @@ const Exams = () => {
             <SearchBar />
 
           </div>
+        <div className="main">
+          
           <div style={{display:"flex", gap:"50px"}}>
                 <div className="card">
                 <section className="card-header">
@@ -119,13 +120,13 @@ const Exams = () => {
                     <option>حسن جدا</option>
                   </select>
                 </label>
-                <button onClick={() => setIsRepresented(false)} style={{padding:"0px 10px",margin:"3px"}}><FontAwesomeIcon icon={faCheck} /></button>
+                <button onClick={() => setIsRepresented(false)} className="blue-btn" ><FontAwesomeIcon icon={faCheck} /></button>
                   </div>) : isDelayed ? (
-                    <div>
-                      <label htmlFor="delay-date">تاريخ التأجيل :</label>
+                    <div className="flex">
+                      
 
                       <ArabicDatePicker />
-                        <button onClick={() => setIsDelayed(false)} style={{padding:"0px 10px",margin:"3px"}}><FontAwesomeIcon icon={faCheck} /></button>
+                        <button onClick={() => setIsDelayed(false)} className="blue-btn"><FontAwesomeIcon icon={faCheck} /></button>
                   
                     </div> ):(
                     <div>

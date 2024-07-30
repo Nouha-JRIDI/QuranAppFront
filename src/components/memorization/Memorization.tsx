@@ -16,12 +16,11 @@ const Memorization = () => {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const type ="memorization"
   return (
     <div>
         <Navbar />
-        <div className="main-section"> 
-        {isModalOpen && <AddProgramModal closeModal={closeModal} />}
-          <div className="flex-sa">
+        <div className="flex-sa">
           
             <button onClick={openModal} className="white-btn">
             <FontAwesomeIcon icon={faPlus} />
@@ -30,6 +29,9 @@ const Memorization = () => {
             </button>
             <SearchBar />
           </div>
+        <div className="main"> 
+        {isModalOpen && <AddProgramModal closeModal={closeModal} type={type} />}
+          
           
           <table className="blue-table">
             <tr>

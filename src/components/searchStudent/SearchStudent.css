@@ -1,20 +1,4 @@
-.nav-icons{
-    display: flex;
-    gap: 20px;
 
-}
-.icon{
-    font-size: 18px;
-    padding: 8px;
-    transition: all 0.3s linear;
-}
-.icon:hover{
-    color: rgb(209, 214, 219);
-    cursor: pointer;
-}
-.links a:hover {
-    color: rgb(209, 214, 219);
-  }
 .main{
     width: 90vw;
     margin: 10px auto;

@@ -92,6 +92,21 @@
     cursor: pointer;
     background-color: rgb(30, 73, 119);
 }
+.date-picker{
+    width: 100px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    
+}
+.flex-gap{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
 
 
 
