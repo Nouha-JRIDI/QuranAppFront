@@ -1,0 +1,57 @@
+
+.white-btn{
+display: flex;
+align-items: center;
+gap: 5px;
+  color: rgb(80,179,179);
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid rgb(80,179,179);
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  margin-top: 10px;
+  width: fit-content;
+  transition: all 0.3s linear;
+}
+.white-btn:hover{
+    color: white;
+    background-color: rgb(80,179,179);
+    cursor: pointer;
+    
+  }
+
+  .blue-table{
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+    width: 50vw;
+    align-self: center;
+    border-collapse: collapse;
+    
+  }
+  .blue-table th {
+    background-color:  rgb(66, 65, 104);
+    color: white;
+    padding: 4px;
+    
+  }
+  .blue-table td{
+    vertical-align: top;
+     
+     padding: 8px;
+  }
+  .blue-table th, .blue-table td {
+    border: 1px solid rgb(167, 166, 166); 
+ 
+
+  }
+  .flex-sa{
+    width: 60vw;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-around; 
+  } 
+  .student-name{
+    color: rgb(4, 21, 77);
+  }
