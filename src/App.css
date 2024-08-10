@@ -1,14 +1,11 @@
-
-
-
 /* arabic fonts*/
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
- @import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
-@import url(https://fonts.googleapis.com/earlyaccess/lateef.css); 
+@import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
 @import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
-@import url(https://fonts.googleapis.com/earlyaccess/thabit.css); 
+@import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
 
 /* .amiri{font-family: 'Amiri', serif;}
 .droid-arabic-kufi{font-family: 'Droid Arabic Kufi', serif;}
@@ -18,49 +15,17 @@
 .thabit{font-family: 'Thabit', serif;}
 */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Droid Arabic Kufi', serif;
 }
-.background{
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-  url(./assets/background2.png) center/cover no-repeat;
-  
-}
-.title{
-  color: rgb(66, 65, 104);
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.submit-btn{
-  color: #fff;
-  font-size: 20px;
-  background-color:rgb(80,179,179) ;
-  border:none;
-  
-  padding: 0.5rem 1rem;
-  margin-top: 10px;
-  width: 150px;
-  transition: all 0.3s linear;
-}
-.submit-btn:hover{
-  cursor: pointer;
-  background-color:rgb(118, 199, 199) ; ;
-
-}
-.form-bottom{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
 
-.logout-btn{
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
+
+
+
+
+
 

@@ -1,41 +1,88 @@
-
 import { useEffect } from 'react';
 import './App.css';
-import Home from './components/home/Home';
-import Register from './components/register/Register';
-import { BrowserRouter, Routes, Route  } from "react-router-dom";
-import Login from './components/login/Login';
-import SearchStudent from './components/searchStudent/SearchStudent';
-import Students from './components/students/Students';
-import Memorization from './components/memorization/Memorization';
-import MemoProgram from './components/memoProgram/MemoProgram';
-import Revision from './components/revision/Revision';
-import Exams from './components/exams/Exams';
-import StudentInfo from './components/studentInfo/StudentInfo';
-
+import Home from './components/Home';
+import Register from './components/Register';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import SearchStudent from './components/SearchStudent';
+import Students from './components/Students';
+import Memorization from './components/Memorization';
+import MemoProgram from './components/MemoProgram';
+import Revision from './components/Revision';
+import Exams from './components/Exams';
+import StudentInfo from './components/StudentInfo';
+import StudentProfile from './components/StudentProfile';
+import Quran from './components/Quran';
+import './index.css';
+import Layout from './components/Layout';
 function App() {
   useEffect(() => {
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
   }, []);
+
+  const teacherNavigation = [
+    { name: 'الطلبة', href: '/students' },
+    { name: 'الحفظ', href: '/memorization' },
+    { name: 'المراجعة', href: '/revision' },
+    { name: 'الإمتحانات', href: '/exams' },
+  ];
+  const studentNavigation = [
+    { name: 'القرآن', href: '/quran' },
+    { name: 'الحفظ', href: '/memorizationS' },
+    { name: 'المراجعة', href: '/revisionS' },
+    { name: 'الإمتحانات', href: '/examsS' },
+  ];
   return (
-    
-      <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-              <Route path="/memoProgram/:id" element={<MemoProgram />} />
-              <Route path="/studentInfo/:fullname/:email" element={<StudentInfo />} />
-              <Route path="/revision" element={<Revision />} />
-              <Route path="/exams" element={<Exams />} />
-              <Route path="/memorization" element={<Memorization />} />
-              <Route path="/students" element={<Students />} />
-              <Route path="/searchStudent" element={<SearchStudent />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/" element={<Home />} />
-            </Routes>
-      </BrowserRouter>
+      <Route path="/" element={<Layout navigation={teacherNavigation}/>}>
+          
+          <Route
+          path="/memorization"
+          element={<Memorization />}
+          
+        />
+        <Route
+          path="/revision"
+          element={<Revision />}
+        />
+        <Route
+          path="/exams"
+          element={<Exams />}
+        />
+         <Route
+          path="/students"
+          element={<Students />}
+        />
+          
+        </Route>
+        <Route
+          path="/quran"
+          element={<Quran navigation={studentNavigation} />}
+        />
+        <Route
+          path="/student-profile"
+          element={<StudentProfile navigation={studentNavigation} />}
+        />
+        <Route
+          path="/memo-program/:id"
+          element={<MemoProgram navigation={teacherNavigation} />}
+        />
+        <Route
+          path="/student-info/:fullname/:email"
+          element={<StudentInfo navigation={teacherNavigation} />}
+        />
       
-    
+        <Route
+          path="/search-student"
+          element={<SearchStudent navigation={teacherNavigation} />}
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

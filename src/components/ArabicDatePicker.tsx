@@ -6,14 +6,13 @@ import { arTN } from 'date-fns/locale';
 registerLocale('ar', arTN);
 
 const ArabicDatePicker = () => {
-    const [delayDate, setDelayDate] = useState<Date | null>(new Date());
+  const [delayDate, setDelayDate] = useState<Date | null>(new Date());
 
   return (
     <div>
-      <label style={{fontSize:"12px"}} htmlFor="start">تاريخ التأجيل:</label>
       <DatePicker
-      className='date-picker'
-        id="start"
+        className="h-30 w-200 mr-6 border border-gray-300 p-3"
+        id="date"
         selected={delayDate}
         onChange={(date: Date | null) => setDelayDate(date)}
         locale="ar"
