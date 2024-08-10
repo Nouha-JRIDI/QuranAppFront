@@ -1,0 +1,73 @@
+
+.main{
+    width: 90vw;
+    margin: 10px auto;
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+
+.search-bar{
+    margin: 10px 0px 10px 0px;
+padding:0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8f1f1;
+    border-radius: 25px;
+    width: 350px;
+    
+    
+}
+
+
+.search-input{
+    background-color: #e8f1f1;
+    width: 270px;
+    height: 40px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.register-form{
+    padding:30px;
+    width: 80vw;
+    box-shadow: 0px 0px 8px #aaa, -0px -0px 8px #ada6a6;
+    border-radius: 6px;
+    
+}
+.register-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    align-items: center;
+}
+.register-form input{
+    margin-right:20px;
+}
+.brand-white{
+    margin-right: 6px;
+    color: white;
+}
+.search-student{
+    width: 80vw;
+}
+.searchbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: url(../../assets/background3.jpg) center/cover no-repeat;
+    border-radius: 6px;
+}
