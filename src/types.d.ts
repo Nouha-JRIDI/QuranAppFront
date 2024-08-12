@@ -11,9 +11,10 @@ export interface NavbarProps {
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  children: ReactNode;
   onClick?: () => void;
 }
+
 
 export interface InputProps {
   id: string;

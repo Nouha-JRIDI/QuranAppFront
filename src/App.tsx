@@ -36,23 +36,23 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Layout navigation={teacherNavigation}/>}>
+      <Route path="/organization" element={<Layout navigation={teacherNavigation}/>}>
           
           <Route
-          path="/memorization"
+          path="/organization/memorization"
           element={<Memorization />}
           
         />
         <Route
-          path="/revision"
+          path="/organization/revision"
           element={<Revision />}
         />
         <Route
-          path="/exams"
+          path="/organization/exams"
           element={<Exams />}
         />
          <Route
-          path="/students"
+          path="/organization/students"
           element={<Students />}
         />
           
@@ -63,7 +63,7 @@ function App() {
         />
         <Route
           path="/student-profile"
-          element={<StudentProfile navigation={studentNavigation} />}
+          element={<StudentProfile />}
         />
         <Route
           path="/memo-program/:id"

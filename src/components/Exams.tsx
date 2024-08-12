@@ -263,7 +263,7 @@ const Exams = () => {
             <section className="border-t border-gray-300">
               <ul className="flex justify-between items-center h-16">
                 {weekdays.map((day) => (
-                  <li className="flex-1 font-bold uppercase text-center text-custom-gray mx-0.5">{day}</li>
+                  <li key={day} className="flex-1 font-bold uppercase text-center text-custom-gray mx-0.5">{day}</li>
                 ))}
               </ul>
               <ul className="grid gap-1 grid-cols-7 justify-items-center text-center">{generateCalendar()}</ul>
