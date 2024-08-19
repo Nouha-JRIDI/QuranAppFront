@@ -63,7 +63,7 @@ const customStyles = {
 
 const LinkCellRenderer = (props: any) => {
   return (
-    <Link to={`/memo-program/${props.value}`}>
+    <Link to={`/organization/memo-program/${props.value}`}>
       {props.value}
     </Link>
   );

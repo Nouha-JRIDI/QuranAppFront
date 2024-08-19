@@ -45,7 +45,7 @@ const exams = [
     id: 1,
     student: 'مريم',
     quantity: '"سورة البقرة : من الآية 30 إلى الآية 40"',
-    present:true,
+    present:false,
   },
   {
     id: 2,
@@ -147,18 +147,62 @@ const Exams = () => {
     },
     [currentDate],
   );
-  const PresentBtn = ({value}:PresentBtnProps) => {
+  const PresentBtn = ({ value }: PresentBtnProps) => {
+    const [isClicked, setIsClicked] = useState(false);
+    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const [confirmedOption, setConfirmedOption] = useState<string | null>(null);
+  
+    const handleButtonClick = () => {
+      setIsClicked(true);
+    };
+  
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+      setSelectedOption(event.target.value);
+    };
+  
+    const handleConfirmClick = () => {
+      if (selectedOption) {
+        setConfirmedOption(selectedOption);
+        setIsClicked(false); 
+      }
+    };
+  
+    if (confirmedOption) {
+      return <span>{confirmedOption}</span>; 
+    }
   
     return value === false ? (
-      <button
-        onClick={() => window.alert('تم الضغط على الزر')}
-        className="bg-light-blue text-white rounded"
-      >
-        تم
-      </button>
+      isClicked ? (
+        <div className="flex items-center">
+          <select
+            value={selectedOption || ''}
+            onChange={handleSelectChange}
+            className="bg-white text-black rounded px-2 py-1"
+          >
+            <option value="" disabled>
+              اختر الخيار
+            </option>
+            <option value="متوسط">متوسط</option>
+            <option value="حسن">حسن</option>
+            <option value="حسن جدا">حسن جدا</option>
+          </select>
+          <button
+            onClick={handleConfirmClick}
+            className="bg-green-500 text-white rounded ml-2 px-2 py-1"
+          >
+            تأكيد
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={handleButtonClick}
+          className="bg-light-blue text-white rounded w-100px"
+        >
+          تم
+        </button>
+      )
     ) : null;
   };
-  
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 

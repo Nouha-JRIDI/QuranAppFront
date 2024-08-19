@@ -18,6 +18,7 @@ export default {
       },
       boxShadow: {
         custom: "0px 0px 8px #aaa, -0px -0px 8px #ada6a6",
+        bottom: "0 5px 10px rgba(0, 0, 0, 0.1)",
       },
     },
   },

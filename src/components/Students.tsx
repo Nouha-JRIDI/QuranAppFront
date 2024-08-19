@@ -80,7 +80,7 @@ const Students = () => {
   return (
     <div>
       <div className="w-[60vw] p-2.5 m-2.5 mx-auto max-w-[1170px] flex justify-around">
-        <Link to="/search-student">
+        <Link to="/organization/search-student">
           <WhiteBtn>
           <FontAwesomeIcon icon={faUserPlus} />
           إضافة طالب </WhiteBtn>

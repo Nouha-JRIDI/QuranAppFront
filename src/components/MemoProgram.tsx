@@ -1,8 +1,6 @@
 import { useParams } from 'react-router-dom';
-import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 import { useEffect, useState } from 'react';
-import { NavbarProps } from '../types';
 import Title from './Title';
 import { AgGridReact } from 'ag-grid-react';
 import "ag-grid-community/styles/ag-grid.css"; 
@@ -44,7 +42,7 @@ interface DetailProgramRow {
 
 
 
-const MemoProgram = ({ navigation }: NavbarProps) => {
+const MemoProgram = () => {
   const { id } = useParams();
     const [rowData, setRowData] = useState<DetailProgramRow[]>([]);
 
@@ -83,7 +81,6 @@ const MemoProgram = ({ navigation }: NavbarProps) => {
 
   return (
     <div>
-      <Navbar navigation={navigation} />
       <div className="w-[90vw] p-2.5 my-2.5 mx-auto max-w-[1170px] flex flex-col justify-center">
         <div className="self-center text-center">
           <Title>برنامج الحفظ رقم {id}</Title>

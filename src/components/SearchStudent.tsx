@@ -1,15 +1,14 @@
 
-import Navbar from './Navbar';
+
 import SearchBar from './SearchBar';
-import { NavbarProps } from '../types';
+
 import Input from './Input';
 import Title from './Title';
 import LightBlueBtn from './LightBlueBtn';
 
-const SearchStudent = ({ navigation }: NavbarProps) => {
+const SearchStudent = () => {
   return (
     <div>
-      <Navbar navigation={navigation} />
       <div className="w-[90vw] m-2.5 mx-auto max-w-[1170px] flex flex-col justify-center items-center">
         <div className="w-[80vw]">
           <Title>إبحث عن طالب</Title>

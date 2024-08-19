@@ -22,16 +22,16 @@ function App() {
   }, []);
 
   const teacherNavigation = [
-    { name: 'الطلبة', href: '/students' },
-    { name: 'الحفظ', href: '/memorization' },
-    { name: 'المراجعة', href: '/revision' },
-    { name: 'الإمتحانات', href: '/exams' },
+    { name: 'الطلبة', href: '/organization/students' },
+    { name: 'الحفظ', href: '/organization/memorization' },
+    { name: 'المراجعة', href: '/organization/revision' },
+    { name: 'الإمتحانات', href: '/organization/exams' },
   ];
   const studentNavigation = [
-    { name: 'القرآن', href: '/quran' },
-    { name: 'الحفظ', href: '/memorizationS' },
-    { name: 'المراجعة', href: '/revisionS' },
-    { name: 'الإمتحانات', href: '/examsS' },
+    { name: 'القرآن', href: '/student/quran' },
+    { name: 'الحفظ', href: '/student/memorizationS' },
+    { name: 'المراجعة', href: '/student/revisionS' },
+    { name: 'الإمتحانات', href: '/student/examsS' },
   ];
   return (
     <BrowserRouter>
@@ -39,45 +39,52 @@ function App() {
       <Route path="/organization" element={<Layout navigation={teacherNavigation}/>}>
           
           <Route
-          path="/organization/memorization"
+          path="memorization"
           element={<Memorization />}
           
         />
         <Route
-          path="/organization/revision"
+          path="revision"
           element={<Revision />}
         />
         <Route
-          path="/organization/exams"
+          path="exams"
           element={<Exams />}
         />
          <Route
-          path="/organization/students"
+          path="students"
           element={<Students />}
         />
-          
-        </Route>
-        <Route
-          path="/quran"
-          element={<Quran navigation={studentNavigation} />}
+
+          <Route
+          path="memo-program/:id"
+          element={<MemoProgram />}
         />
         <Route
-          path="/student-profile"
-          element={<StudentProfile />}
-        />
-        <Route
-          path="/memo-program/:id"
-          element={<MemoProgram navigation={teacherNavigation} />}
-        />
-        <Route
-          path="/student-info/:fullname/:email"
-          element={<StudentInfo navigation={teacherNavigation} />}
+          path="student-info/:fullname/:email"
+          element={<StudentInfo />}
         />
       
         <Route
-          path="/search-student"
-          element={<SearchStudent navigation={teacherNavigation} />}
+          path="search-student"
+          element={<SearchStudent />}
         />
+          
+        </Route>
+
+
+        <Route path="/student" element={<Layout navigation={studentNavigation}/>}>
+        <Route
+          path="quran"
+          element={<Quran />}
+        />
+        <Route
+          path="profile"
+          element={<StudentProfile />}
+        />
+        </Route>
+        
+   
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
